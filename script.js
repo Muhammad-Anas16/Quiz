@@ -254,13 +254,10 @@ let ind = document.getElementById("ind");
 let index = 0;
 let score = 0;
 
-let quitfunc = () => {
-    location.reload();
-}
-
 let checkScore = (e) => {
 
     console.log(e.target);
+    ind.innerText = index;
 
     if (e.target.textContent == data[index - 1].correct) {
         score++
@@ -283,10 +280,15 @@ let questionShow = () => {
     for (var i in data[index].opt) {
         var list = document.createElement("button");
         list.setAttribute("class", "ansItem");
-        list.setAttribute("onClick", "checkScore(event)");
-        list.setAttribute("onClick", "questionShow()");
+        list.setAttribute("onClick", "checkScore(event), questionShow()");
         list.innerHTML = data[index].opt[i]
         optBox.appendChild(list);
+        // console.log(list);
     }
     index++
 };
+
+
+// let quitfunc = () => {
+//     location.reload();
+// }
