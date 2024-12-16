@@ -289,6 +289,19 @@ let questionShow = () => {
 };
 
 
-// let quitfunc = () => {
-//     location.reload();
-// }
+let quitfunc = () => {
+    location.reload();
+}
+
+// setInterval(() => {
+//     var counter = 15;
+//     var second = document.getElementById("secTime");
+
+//     second.innerHTML = counter;
+//     counter--
+//     if (counter == 0) {
+//         questionShow()
+//     }
+
+// }, 1000);
+
