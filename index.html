@@ -12,10 +12,31 @@
 <body>
 
     <section class="sec1" id="sec1">
-        <button onclick="questionShow(event)">Start</button>
+
+        <div class="start-box">
+
+            <nav>
+                <h2>Quiz</h2>
+            </nav>
+
+            <div class="box">
+                <h2>Would you like to begin a test of based on basic "HTML CSS & JAVASCRIPT"?</h2>
+            </div>
+
+            <div class="startBtn" id="start">
+                <button class="strBtn" onclick="questionShow(event)">Start</button>
+                <button class="qitBtn" onclick="quitfunc(event)">Quit</button>
+            </div>
+
+        </div>
     </section>
 
     <section class="sec2" id="sec2">
+
+        <nav>
+            <h2><span id="ind">0</span>/30</h2>
+            <h2>Quiz</h2>
+        </nav>
 
         <div class="container">
 
@@ -23,11 +44,14 @@
 
                 <div class="head">
                     <h2 class="h2" id="h2"></h2>
-                </div>
+                </div><br>
 
                 <div class="opt" id="opt"></div>
 
             </div>
+        </div>
+
+        <div class="progress">
 
         </div>
 

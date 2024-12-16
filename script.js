@@ -249,20 +249,27 @@ let h2 = document.getElementById("h2");
 let optBox = document.getElementById("opt");
 let sec1 = document.getElementById("sec1");
 let sec2 = document.getElementById("sec2");
+let ind = document.getElementById("ind");
 
 let index = 0;
 let score = 0;
 
+let quitfunc = () => {
+    location.reload();
+}
+
 let checkScore = (e) => {
 
-    if(e.target.textContent == data[index - 1].correct){
+    console.log(e.target);
+
+    if (e.target.textContent == data[index - 1].correct) {
         score++
         console.log(true);
         console.log("score", score);
         return
     }
     console.log(false);
-    
+
 }
 
 let questionShow = () => {
