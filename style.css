@@ -188,30 +188,54 @@ nav {
 /* @media screen */
 
 @media only screen and (max-width: 425px) {
-    .container{
+    .container {
         padding-bottom: 10%;
         overflow: scroll;
     }
+
     .main-Box {
         flex-direction: column;
     }
-    .main-Box > div{
+
+    .main-Box>div {
         width: 90%;
     }
+
     .opt {
         flex-wrap: nowrap;
     }
 
 }
 
-@media only screen and (max-width: 320px){
-    .head{
-        width: 96% !important;
-    }
-    .head .h2{
+@media only screen and (max-width: 375px) {
+    .box h2 {
+        width: 90%;
         font-size: 1em;
     }
-    .opt{
+
+    .startBtn {
+        width: 90%;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .startBtn button {
+        width: 80%;
+        padding: 15px;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .head {
+        width: 96% !important;
+    }
+
+    .head .h2 {
+        font-size: 1em;
+    }
+
+    .opt {
         width: 96% !important;
     }
 }
