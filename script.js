@@ -5,7 +5,7 @@ const data = [
         opt: [
             "Hyper Text Markup Language",
             "Home Tool Markup Language",
-            "Hyperlinks and Text Markup Language",
+            "Hight Text Markup Language",
         ],
         correct: "Hyper Text Markup Language",
     },
@@ -42,18 +42,16 @@ const data = [
     },
     {
         qno: 6,
-        question: "What is the correct way to comment in HTML?",
+        question: "JavaScript is a case-sensitive language.",
         opt: [
-            "// This is a comment",
-            "/* This is a comment */",
-            "<!-- This is a comment -->",
-            "# This is a comment"
+            "true",
+            "false",
         ],
-        correct: "<!-- This is a comment -->",
+        correct: "true",
     },
     {
         qno: 7,
-        question: "Which property is used to change the background color in CSS?",
+        question: "How to change the background color in CSS?",
         opt: ["color", "background-color", "bgcolor", "background"],
         correct: "background-color",
     },
@@ -70,11 +68,9 @@ const data = [
     },
     {
         qno: 9,
-        question: "Which tag is used to create a hyperlink in HTML?",
-        // opt: ["<link>", "<a>", "<href>", "<hyperlink>"],
-        opt: ["link", "a", "href", "hyperlink"],
-        // correct: "<a>",
-        correct: "a",
+        question: "let x = 10; let y = 5; console.log(x + y + '5')",
+        opt: ["20", "155", "NaN", "'155'"],
+        correct: "'155'",
     },
     {
         qno: 10,
@@ -90,11 +86,9 @@ const data = [
     },
     {
         qno: 12,
-        question: "Which HTML element is used for the largest heading?",
-        // opt: ["<heading>", "<h6>", "<h1>", "<head>"],
-        opt: ["heading", "h6", "h1", "head"],
-        // correct: "<h1",
-        correct: "h1",
+        question: "let x = 10; let y = 5; console.log(typeof(x + y))",
+        opt: ["boolean", "string", "NaN", "Number"],
+        correct: "string",
     },
     {
         qno: 13,
@@ -102,44 +96,36 @@ const data = [
         opt: [
             "// This is a comment",
             "/* This is a comment */",
-            "<!-- This is a comment -->",
             "# This is a comment"
         ],
         correct: "/* This is a comment */",
     },
     {
         qno: 14,
-        question: "Which method can be used to find the length of a string in JavaScript?",
+        question: "Which method is used to find the length of a string in Js?",
         opt: [".size()", ".length()", ".getLength()", ".len()"],
         correct: ".length()",
     },
     {
         qno: 15,
-        question: "What is the correct HTML for inserting an image?",
-        // opt: [
-        //     "<img src='image.jpg'>",
-        //     "<image src='image.jpg'>",
-        //     "<img href='image.jpg'>",
-        //     "<img link='image.jpg'>"
-        // ],
+        question: "How do you declare a variable in JavaScript?",
         opt: [
-            " img src='image.jpg' ",
-            " image src='image.jpg' ",
-            " img href='image.jpg' ",
-            " img link='image.jpg' "
+            "var variableName; ",
+            "let variableName; ",
+            "const variableName; ",
+            "All of Them",
         ],
-        // correct: "<img src='image.jpg'>",
-        correct: "img src='image.jpg'",
+        correct: "All of Them",
     },
     {
         qno: 16,
-        question: "Which CSS property is used to set the spacing between lines of text?",
+        question: "Which property is used to set the spacing between lines of text?",
         opt: ["line-height", "letter-spacing", "spacing", "text-spacing"],
         correct: "line-height",
     },
     {
         qno: 17,
-        question: "Which of the following is the correct syntax to print a message in the console in JavaScript?",
+        question: "Which of the following is the correct syntax in JavaScript?",
         opt: ["'console.log('Hello');'", "'log.console('Hello');'", "'print('Hello');'", "'echo('Hello');'"],
         correct: "'console.log('Hello');'",
     },
@@ -163,7 +149,7 @@ const data = [
     {
         qno: 20,
         question: "Which symbol is used for single-line comments in JavaScript?",
-        opt: ["//", "/* */", "#", "<!-- -->"],
+        opt: ["//", "/* */", "#"],
         correct: "//",
     },
     {
@@ -180,7 +166,7 @@ const data = [
     },
     {
         qno: 23,
-        question: "Which JavaScript method is used to round a number to the nearest integer?",
+        question: "JavaScript method used to round a number to the nearest integer?",
         opt: ["Math.round()", "Math.ceil()", "Math.floor()", "Math.rnd()"],
         correct: "Math.round()",
     },
@@ -215,9 +201,7 @@ const data = [
     {
         qno: 27,
         question: "Which HTML tag is used to define a table row?",
-        // opt: ["<tr>", "<td>", "<th>", "<table-row>"],
         opt: ["tr", "td", "th", "table-row"],
-        // correct: "<tr>",
         correct: "tr",
     },
     {
@@ -245,6 +229,7 @@ const data = [
     },
 ];
 
+
 let h2 = document.getElementById("h2");
 let optBox = document.getElementById("opt");
 let sec1 = document.getElementById("sec1");
@@ -256,16 +241,16 @@ let score = 0;
 
 let checkScore = (e) => {
 
-    console.log(e.target);
+    // console.log(e.target);
     ind.innerText = index;
 
     if (e.target.textContent == data[index - 1].correct) {
         score++
-        console.log(true);
+        // console.log(true);
         console.log("score", score);
         return
     }
-    console.log(false);
+    // console.log(false);
 
 }
 
@@ -286,22 +271,15 @@ let questionShow = () => {
         // console.log(list);
     }
     index++
+    if (data[index] > 29) {
+        // console.log(index);
+        alert("Question over");
+    }
+
 };
 
 
 let quitfunc = () => {
     location.reload();
 }
-
-// setInterval(() => {
-//     var counter = 15;
-//     var second = document.getElementById("secTime");
-
-//     second.innerHTML = counter;
-//     counter--
-//     if (counter == 0) {
-//         questionShow()
-//     }
-
-// }, 1000);
 
